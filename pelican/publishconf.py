@@ -9,7 +9,7 @@ import os
 
 AUTHOR = 'Lee'
 SITENAME = '2016 Matsu'
-SITEURL = ''
+SITEURL = 'pages.mongkonglee.com'
 
 
 PATH = 'content'
@@ -21,9 +21,6 @@ DEFAULT_LANG = 'en'
 DEFAULT_DATE = 'fs'
 DEFAULT_CATEGORY = 'misc'
 
-# global metadata to all the contents
-
-#THEME = 'pelican-octopress'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -33,14 +30,13 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Python', 'http://python.org/'),)
+LINKS = (('Python', 'http://python.org/'), )
 
 # Social widget
-SOCIAL = (('github', 'http://github.com/kmollee'),)
+SOCIAL = (('github', 'http://github.com/kmollee'),('Blog', 'http://www.mongkonglee.com/'))
           
 DEFAULT_PAGINATION = 10
 
-SITEURL = ''
 RELATIVE_URLS = True
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -50,8 +46,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
-DISQUS_SITENAME = ""
+DISQUS_SITENAME = "pagesmongkongleecom"
 #GOOGLE_ANALYTICS = ""
 
 # 必須絕對目錄或相對於設定檔案所在目錄
