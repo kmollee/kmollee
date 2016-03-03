@@ -46,7 +46,7 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = "pagesmongkongleecom"
+DISQUS_SITENAME = "pages.mongkonglee.com"
 #GOOGLE_ANALYTICS = ""
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
