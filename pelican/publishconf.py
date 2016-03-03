@@ -46,8 +46,10 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = "pagesmongkongleecom"
+DISQUS_SITENAME = "pages.mongkonglee.com"
 #GOOGLE_ANALYTICS = ""
+
+DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 
 # 必須絕對目錄或相對於設定檔案所在目錄
 PLUGIN_PATHS = ['./../plugin']

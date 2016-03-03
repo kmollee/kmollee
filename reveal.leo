@@ -21,7 +21,6 @@
 </v>
 <v t="amd.20150919113957.1" a="E"><vh>以下為 pelican 文章</vh>
 <v t="amd.20151021120245.1"><vh>@button admin pelican</vh></v>
-<v t="amd.20150919124128.1"><vh>@button user pelican</vh></v>
 <v t="lee.20160303223021.1"><vh>@clean CNAME</vh></v>
 <v t="amd.20150919114010.1" a="E"><vh>@path pelican</vh>
 <v t="amd.20151006130205.1"><vh>@edit publishconf.py</vh></v>
@@ -30,7 +29,7 @@
 </v>
 </v>
 </v>
-<v t="amd.20150919120205.1" a="E"><vh>以下為 reveal 投影片</vh>
+<v t="amd.20150919120205.1"><vh>以下為 reveal 投影片</vh>
 <v t="amd.20150915211341.1" a="E"><vh>@clean simplest.html</vh>
 <v t="amd.20150917085040.1"><vh>檔案說明</vh></v>
 <v t="amd.20150915211351.1" a="E"><vh>html 標註</vh>
@@ -225,10 +224,6 @@ pelican pelican -o ./../ -s publishconf.py
 <t tx="amd.20150919113957.1"></t>
 <t tx="amd.20150919114010.1"></t>
 <t tx="amd.20150919120205.1"></t>
-<t tx="amd.20150919124128.1">@language python
-import os
-os.system("pelican pelican/content -o ./ -s pelican/publishconf.py -t ../../theme/pelican-octopress")
-g.es("user pelican 執行完畢")</t>
 <t tx="amd.20151006113136.1"></t>
 <t tx="amd.20151007224830.1">安裝
 
