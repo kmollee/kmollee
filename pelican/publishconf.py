@@ -9,7 +9,7 @@ import os
 
 AUTHOR = 'Lee'
 SITENAME = '2016 Matsu'
-SITEURL = 'pages.mongkonglee.com'
+#SITEURL = 'pages.mongkonglee.com'
 
 
 PATH = 'content'
