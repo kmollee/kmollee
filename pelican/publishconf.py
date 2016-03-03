@@ -57,7 +57,7 @@ PLUGINS = ['liquid_tags.notebook', 'tipue_search']
 # 目錄設定相對於 reveal 下的 content 目錄
 NOTEBOOK_DIR = 'notebook'
 
-SEARCH_URL = '/search'
+#SEARCH_URL = '/search'
 '''
 if not os.path.exists('_nb_header.html'):     
     import warnings 
