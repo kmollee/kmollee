@@ -1,6 +1,6 @@
 Title: 2016 Pelcian setup
 Category: Programming
-Tags: pelica
+Tags: pelican
 Slug: 2016_pelican_setup
 Authors: Lee
 

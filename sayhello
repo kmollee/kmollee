@@ -1,0 +1,30 @@
+#@+leo-ver=5-thin
+#@+node:lee.20160304164904.1: * @thin sayhello
+#@@language python
+from PyQt5.QtWidgets import (QWidget, QLabel, QLineEdit, 
+    QTextEdit, QGridLayout, QApplication, QPushButton)
+w = QWidget()
+title = QLabel('Title')
+titleEdit = QLineEdit()
+
+okButton = QPushButton("OK")
+
+grid = QGridLayout()
+grid.setSpacing(10)
+
+grid.addWidget(title, 1, 0)
+grid.addWidget(titleEdit, 1, 1)
+
+grid.addWidget(okButton)
+
+w.setLayout(grid)
+w.resize(250, 150)
+w.move(300, 300)
+w.setWindowTitle('Simple test')
+w.show()
+c.my_test = w # <-- Keep a reference to the window!
+
+okButton.clicked.connect(getValue)
+
+def 
+#@-leo

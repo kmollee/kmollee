@@ -10,17 +10,22 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="amd.20150913232631.1" a="E"><vh>@settings</vh>
+<v t="amd.20150913232631.1"><vh>@settings</vh>
 <v t="amd.20150913232631.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="amd.20150913232631.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
+<v t="lee.20160304163730.1"><vh>newHeadline</vh></v>
 <v t="amd.20150919102739.1" a="E"><vh>專案架構</vh>
 <v t="amd.20150919113520.1"><vh>@edit .gitignore</vh></v>
 <v t="amd.20151007224830.1"><vh>Jupyter 安裝與執行</vh></v>
 <v t="amd.20150919103357.1"><vh>pelican 設定</vh></v>
+<v t="lee.20160304165213.1"><vh>@menus test</vh></v>
+<v t="lee.20160304164904.1"><vh>@thin sayhello</vh></v>
+<v t="lee.20160304183649.1"><vh>@button commit</vh></v>
 </v>
 <v t="amd.20150919113957.1" a="E"><vh>以下為 pelican 文章</vh>
 <v t="amd.20151021120245.1"><vh>@button admin pelican</vh></v>
+<v t="lee.20160304163539.1"><vh>@button</vh></v>
 <v t="lee.20160303223021.1"><vh>@clean CNAME</vh></v>
 <v t="amd.20150919114010.1" a="E"><vh>@path pelican</vh>
 <v t="amd.20151006130205.1"><vh>@clean publishconf.py</vh></v>
@@ -318,10 +323,83 @@ g.es("admin pelican 執行完畢")</t>
 <t tx="lee.20160304161356.1">@language md
 Title: 2016 Pelcian setup
 Category: Programming
-Tags: pelica
+Tags: pelican
 Slug: 2016_pelican_setup
 Authors: Lee
 
+這邊紀錄一下有關於 pelcian 、 github gh-pages 及 disqus 串接
+
+- [pelican](https://github.com/getpelican/pelican) : Pelican is a static site generator, written in Python.
+- [github](https://github.com) : web-based Git repository hosting service
+- [disqus](https://disqus.com)  pronounced "discuss", is a service and tool for web comments and discussions
+
+目標 : 以 pelican 產生靜態網站, 並使用 github gh-pages 來當作 host service, 最後加入 disqus 評論系統
+
+1. pelican 本身預設並沒有加入搜索功能，加入`tipue_search` plugin 即可
+2. 假如已經在 github gh-pages 佈署, 可在該倉儲 `settings` 觀看使用建立成功, 相關設定 ref [GitHub Pages Basics/User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages/)
+3. 假如需自訂 domain 請在 倉儲內加入 `CNAME` 檔案，內部請填入轉址 url, 當然還是需要你將自己的 domain dns 轉到相對應
+4. disqus 服務要在 publishconf.py 設定
+~~~python
+DISQUS_SITENAME = ""
+RELATIVE_URLS = False
+~~~
+</t>
+<t tx="lee.20160304163539.1"></t>
+<t tx="lee.20160304163730.1"></t>
+<t tx="lee.20160304165213.1"></t>
+<t tx="lee.20160304183649.1">@language python
+from PyQt5.QtWidgets import (QWidget, QLabel, QLineEdit,
+    QTextEdit, QGridLayout, QApplication, QPushButton, QMainWindow)
+import sys
+import os
+class Example(QWidget):
+
+    def __init__(self, parent=None):
+        super(Example, self).__init__(parent)
+        self.le = QLineEdit(self)
+        self.le.move(130, 22)
+        self.btn = QPushButton('Commit', self)
+        #self.qbtn = QPushButton('Quit', self)
+        #self.qbtn.clicked.connect(QApplication.instance().quit)
+        
+        self.btn.move(20, 20)
+        self.btn.clicked.connect(self.pushCommit)
+
+
+
+        self.setGeometry(300, 300, 290, 150)
+        self.setWindowTitle('Input commit')
+
+
+
+    def pushCommit(self):
+
+        commitMsg = self.le.text()
+        os.system("pelican pelican/content -o ./ -s pelican/publishconf.py -t ./theme/pelican-bootstrap3")
+        os.system("git add -A")
+        os.system("git commit -m \"" + commitMsg +"\"")
+        os.sysyem("git push origin gh-pages")
+        g.es("PUSH 完畢")
+        #self.quitDialog()
+        #self.close()
+
+        #exit()
+        #sys.exit(0)
+        #QtGui.qApp.quit()
+    def quitDialog(self):
+        g.es('quit!132')
+        self.close()
+
+
+if __name__ == '__main__':
+
+    app = QApplication(sys.argv)
+    ex = Example()
+    ex.show()
+    app.exec_()
+    #sys.exit(app.exec_())
+    #sys.exit(app.exec())
+    #ex.quitDialog()
 </t>
 </tnodes>
 </leo_file>
