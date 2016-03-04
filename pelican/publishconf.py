@@ -9,7 +9,7 @@ import os
 
 AUTHOR = 'Lee'
 SITENAME = '2016 Matsu'
-#SITEURL = 'pages.mongkonglee.com'
+SITEURL = 'http://pages.mongkonglee.com'
 
 
 PATH = 'content'
@@ -47,6 +47,7 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 DISQUS_SITENAME = "pagesmongkongleecom"
+
 #GOOGLE_ANALYTICS = ""
 
 DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
