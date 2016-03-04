@@ -25,6 +25,7 @@
 <v t="amd.20150919114010.1" a="E"><vh>@path pelican</vh>
 <v t="amd.20151006130205.1"><vh>@clean publishconf.py</vh></v>
 <v t="amd.20151006113136.1" a="E"><vh>@path content</vh>
+<v t="lee.20160304161356.1"><vh>@clean 2016pelciansetup.md</vh></v>
 <v t="lee.20160303230827.1"><vh>@edit 2016goodstart.md</vh></v>
 <v t="amd.20150919114035.1"><vh>@edit 2015cphww1.md</vh></v>
 </v>
@@ -314,5 +315,13 @@ import os
 os.system("pelican pelican/content -o ./ -s pelican/publishconf.py -t ./theme/pelican-bootstrap3")
 g.es("admin pelican 執行完畢")</t>
 <t tx="lee.20160303223021.1">pages.mongkonglee.com</t>
+<t tx="lee.20160304161356.1">@language md
+Title: 2016 Pelcian setup
+Category: Programming
+Tags: pelica
+Slug: 2016_pelican_setup
+Authors: Lee
+
+</t>
 </tnodes>
 </leo_file>

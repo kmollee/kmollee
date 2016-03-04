@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016 Matsu</title><link href="http://pages.mongkonglee.com/" rel="alternate"></link><link href="http://pages.mongkonglee.com/feeds/programming.atom.xml" rel="self"></link><id>http://pages.mongkonglee.com/</id><updated>2016-03-04T16:32:19+08:00</updated><entry><title>2016 Pelcian setup</title><link href="http://pages.mongkonglee.com/2016_pelican_setup.html" rel="alternate"></link><updated>2016-03-04T16:32:19+08:00</updated><author><name>Lee</name></author><id>tag:pages.mongkonglee.com,2016-03-04:2016_pelican_setup.html</id><summary type="html">&lt;p&gt;這邊紀錄一下有關於 pelcian 、 github gh-pages 及 disqus 串接&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt; : Pelican is a static site generator, written in Python.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com"&gt;github&lt;/a&gt; : web-based Git repository hosting service&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://disqus.com"&gt;disqus&lt;/a&gt;  pronounced "discuss", is a service and tool for web comments and discussions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目標 : 以 pelican 產生靜態網站, 並使用 github gh-pages 來當作 host service, 最後加入 disqus 評論系統&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;pelican 本身預設並沒有加入搜索功能，加入&lt;code&gt;tipue_search&lt;/code&gt; plugin 即可&lt;/li&gt;
+&lt;li&gt;假如已經在 github gh-pages 佈署, 可在該倉儲 &lt;code&gt;settings&lt;/code&gt; 觀看使用建立成功, 相關設定 ref &lt;a href="https://help.github.com/articles/user-organization-and-project-pages/"&gt;GitHub Pages Basics/User, Organization, and Project Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;假如需自訂 domain 請在 倉儲內加入 &lt;code&gt;CNAME&lt;/code&gt; 檔案，內部請填入轉址 url, 當然還是需要你將自己的 domain dns 轉到相對應&lt;/li&gt;
+&lt;li&gt;disqus 服務要在 publishconf.py 設定&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;RELATIVE_URLS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="pelica"></category></entry></feed>
