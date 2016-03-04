@@ -378,7 +378,7 @@ class Example(QWidget):
         os.system("pelican pelican/content -o ./ -s pelican/publishconf.py -t ./theme/pelican-bootstrap3")
         os.system("git add -A")
         os.system("git commit -m \"" + commitMsg +"\"")
-        os.sysyem("git push origin gh-pages")
+        os.system("git push origin gh-pages")
         g.es("PUSH 完畢")
         #self.quitDialog()
         #self.close()
